@@ -1,5 +1,21 @@
 <Beans>
     <Bean Class="com.genuitec.eclipse.sqlexplorer.utils.ConnectionProfile">
+        <activate>true</activate>
+        <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-72c434f7:1937c0244b2:-7f77</string>
+        </driverIdentifier>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-76c222a3:1937c3c21b3:-7fce</string>
+        </identifier>
+        <name>orcl12c</name>
+        <password encryption="true">J5NSOY8LqpqIaeK7vWPjrg==</password>
+        <promptForPassword>false</promptForPassword>
+        <schema Indexed="true"/>
+        <schemaDisplayPolicy>0</schemaDisplayPolicy>
+        <url>jdbc:oracle:thin:@//localhost:1521/XSCJ</url>
+        <userName>SYSTEM</userName>
+    </Bean>
+    <Bean Class="com.genuitec.eclipse.sqlexplorer.utils.ConnectionProfile">
         <activate>false</activate>
         <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
             <string>5d15bd5:1937871fce6:-7fd4</string>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!-- 默认包，继承自struts-default -->
+    <package name="default" extends="struts-default">
+        <!-- 配置一个action，名为showAll -->
+        <action name="showAll" class="org.easybooks.xscj.action.ScoreAction" method="showAll">
+            <!-- 动作执行后跳转到该页面 -->
+            <result name="result">/scoreManage.jsp</result>
+        </action>
+    </package>
+    <!-- 文件上传配置 -->
+    <constant name="struts.multipart.saveDir" value="/tmp"/>  
+    <!-- 启用动态方法调用 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+</struts>

@@ -1,0 +1,14 @@
+
+11月 30, 2024 18:11:40.01 NEW SESSION
+11月 30, 2024 18:11:40.02 Created TensorFlow Lite XNNPACK delegate for CPU.
+11月 30, 2024 18:11:40.34 [35288:3060:1130/181140.340:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11月 30, 2024 18:12:02.58 [35288:3060:1130/181202.583:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11月 30, 2024 18:12:50.07 [35288:3060:1130/181250.078:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11月 30, 2024 18:13:10.11 [35288:3060:1130/181310.110:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+11月 30, 2024 18:14:35.47 [35288:3060:1130/181435.478:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11月 30, 2024 18:15:10.38 [35288:3060:1130/181510.380:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+11月 30, 2024 18:17:10.74 [35288:3060:1130/181710.742:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+11月 30, 2024 18:17:19.08 [35288:3060:1130/181719.086:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11月 30, 2024 18:18:21.01 [35288:3060:1130/181821.012:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+11月 30, 2024 18:20:11.05 [35288:3060:1130/182011.049:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+11月 30, 2024 18:22:11.62 [35288:3060:1130/182211.621:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2

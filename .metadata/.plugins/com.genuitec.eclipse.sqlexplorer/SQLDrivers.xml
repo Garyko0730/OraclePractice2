@@ -50,6 +50,20 @@
         <url>jdbc:derby://&lt;server&gt;[:&lt;port&gt;]/&lt;databaseName&gt;[;&lt;URL attribute&gt;=&lt;value&gt;]</url>
     </Bean>
     <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
+        <driverClassName>oracle.jdbc.driver.OracleDriver</driverClassName>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-72c434f7:1937c0244b2:-7f76</string>
+        </identifier>
+        <jarFileName/>
+        <jarFileNames Indexed="true">
+            <Bean Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.StringWrapper">
+                <string>D:\oracle12c\ojdbc7.jar</string>
+            </Bean>
+        </jarFileNames>
+        <name>Oracle Thin Driver01</name>
+        <url>jdbc:oracle:thin:@&lt;server&gt;[:&lt;1521&gt;]:&lt;XSCJ&gt;</url>
+    </Bean>
+    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
         <driverClassName>com.ingres.jdbc.IngresDriver</driverClassName>
         <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
             <string>-76</string>
@@ -68,6 +82,20 @@
         <jarFileNames Indexed="true"/>
         <name>IBM DB2 Net Driver</name>
         <url>jdbc:db2://&lt;server&gt;:&lt;6789&gt;/&lt;db-name&gt;</url>
+    </Bean>
+    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
+        <driverClassName>oracle.jdbc.OracleDriver</driverClassName>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-72c434f7:1937c0244b2:-7f77</string>
+        </identifier>
+        <jarFileName/>
+        <jarFileNames Indexed="true">
+            <Bean Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.StringWrapper">
+                <string>D:\oracle12c\ojdbc7.jar</string>
+            </Bean>
+        </jarFileNames>
+        <name>Oracle Thin Driver0</name>
+        <url>jdbc:oracle:thin:@&lt;server&gt;[:&lt;1521&gt;]:&lt;XSCJ&gt;</url>
     </Bean>
     <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
         <driverClassName>org.elasticsearch.xpack.sql.jdbc.EsDriver</driverClassName>
