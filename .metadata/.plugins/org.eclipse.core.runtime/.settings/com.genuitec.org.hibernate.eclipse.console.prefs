@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+hql.comment.color=199,221,12
+hql.default.color=216,216,216
+hql.identifier.color=121,171,255
+hql.keyword.color=141,203,226
+hql.quoted_literal.color=127,179,71
+overriddenByCSS=,hql.comment.color,hql.identifier.color,hql.default.color,hql.keyword.color,hql.quoted_literal.color,

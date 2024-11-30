@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+module-start-timeout=300000
+runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<runtimes>\r\n  <runtime id\="Apache Tomcat v9.0" location\="D\:/apps/Tomcat9.0" name\="Apache Tomcat v9.0" runtime-type-id\="org.eclipse.jst.server.tomcat.runtime.90" timestamp\="1" vm-install-id\="1732893264822" vm-install-type-id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType"/>\r\n  <runtime id\="com.genuitec.embedded.tomcat.runtime.v90" id-set\="true" location\="D\:/apps/MyEclipse/plugins/com.genuitec.eclipse.server.embedded.tomcat.v90.core_13.0.0.v202405290550-me/tomcat9046" name\="MyEclipse Tomcat v9.0" runtime-type-id\="com.genuitec.embedded.tomcat.runtime.v90" timestamp\="0"/>\r\n</runtimes>\r\n

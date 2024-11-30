@@ -1,0 +1,9 @@
+colorDefault=216,216,216
+colorKey=190,214,255
+colorKeyword=141,203,226
+colorNull=141,203,226
+colorNumber=127,179,71
+colorString=255,198,0
+colorValue=190,214,255
+eclipse.preferences.version=1
+overriddenByCSS=,colorNumber,colorNull,colorDefault,colorKey,colorValue,colorKeyword,colorString,

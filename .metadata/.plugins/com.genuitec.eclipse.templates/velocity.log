@@ -1,0 +1,29 @@
+Fri Nov 29 23:25:36 CST 2024  [debug] AvalonLogSystem initialized using logfile 'D:\Myeclipse_Workspaces\.metadata\.plugins\com.genuitec.eclipse.templates\velocity.log'
+Fri Nov 29 23:25:36 CST 2024   [info] ************************************************************** 
+Fri Nov 29 23:25:36 CST 2024   [info] Starting Jakarta Velocity v1.4
+Fri Nov 29 23:25:36 CST 2024   [info] RuntimeInstance initializing.
+Fri Nov 29 23:25:36 CST 2024   [info] Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+Fri Nov 29 23:25:36 CST 2024   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Fri Nov 29 23:25:36 CST 2024   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Fri Nov 29 23:25:36 CST 2024   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Fri Nov 29 23:25:36 CST 2024   [info] Resource Loader Instantiated: com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Fri Nov 29 23:25:36 CST 2024   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Fri Nov 29 23:25:36 CST 2024   [info] Default ResourceManager initialization complete.
+Fri Nov 29 23:25:36 CST 2024   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Fri Nov 29 23:25:36 CST 2024   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Fri Nov 29 23:25:36 CST 2024   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Fri Nov 29 23:25:36 CST 2024   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Fri Nov 29 23:25:36 CST 2024   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Fri Nov 29 23:25:36 CST 2024   [info] Created: 20 parsers.
+Fri Nov 29 23:25:36 CST 2024   [info] Velocimacro : initialization starting.
+Fri Nov 29 23:25:36 CST 2024   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+Fri Nov 29 23:25:36 CST 2024   [info] ResourceManager : found VM_global_library.vm with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Fri Nov 29 23:25:36 CST 2024   [info] Velocimacro :  VM library template macro registration complete.
+Fri Nov 29 23:25:36 CST 2024   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Fri Nov 29 23:25:36 CST 2024   [info] Velocimacro : allowInlineToOverride = true : VMs defined inline may replace previous VM definitions
+Fri Nov 29 23:25:36 CST 2024   [info] Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+Fri Nov 29 23:25:36 CST 2024   [info] Velocimacro : messages on  : VM system will output logging messages
+Fri Nov 29 23:25:36 CST 2024   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Fri Nov 29 23:25:36 CST 2024   [info] Velocimacro : initialization complete.
+Fri Nov 29 23:25:36 CST 2024   [info] Velocity successfully started.
+Fri Nov 29 23:25:36 CST 2024   [info] ResourceManager : found /templates/velocity/welcome/Jsp.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
