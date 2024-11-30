@@ -1,18 +1,4 @@
-11月 30, 2024 4:42:22 下午 com.genuitec.pulse.client.deliverypackage.runtime.internal.Activator initializeLoggers
-信息: Package starting up at Sat Nov 30 16:42:22 CST 2024
-11月 30, 2024 4:42:24 下午 com.genuitec.pulse.client.deliverypackage.runtime.UpdatesService checkForWorkspaceUpdates
-信息: Latest version of package has already been enabled in the workspace; check finished in 4ms
-11月 30, 2024 5:02:38 下午 org.eclipse.tm4e.core.registry.Registry _doLoadSingleGrammar
-警告: No grammar source for scope [source.smarty]
-11月 30, 2024 5:02:38 下午 org.eclipse.tm4e.core.registry.Registry _doLoadSingleGrammar
-警告: No grammar source for scope [source.python]
-11月 30, 2024 5:02:38 下午 org.eclipse.tm4e.core.internal.rule.RuleFactory _compilePatterns
-警告: CANNOT find grammar for scopeName [source.smarty]. I am [text.html.basic@org.eclipse.wildwebdeveloper]
-11月 30, 2024 5:02:38 下午 org.eclipse.tm4e.core.internal.rule.RuleFactory _compilePatterns
-警告: REMOVING BeginEndRule{id=25,name=null} ENTIRELY DUE TO EMPTY PATTERNS THAT ARE MISSING
-11月 30, 2024 5:02:38 下午 org.eclipse.tm4e.core.internal.rule.RuleFactory _compilePatterns
-警告: CANNOT find grammar for scopeName [source.python]. I am [text.html.basic@org.eclipse.wildwebdeveloper]
-11月 30, 2024 5:02:38 下午 org.eclipse.tm4e.core.internal.rule.RuleFactory _compilePatterns
-警告: REMOVING BeginEndRule{id=26,name=null} ENTIRELY DUE TO EMPTY PATTERNS THAT ARE MISSING
-11月 30, 2024 5:02:38 下午 org.eclipse.tm4e.core.internal.rule.RuleFactory _compilePatterns
-警告: CANNOT find rule for scopeName [#property-value]. I am [text.html.basic@org.eclipse.wildwebdeveloper]
+11月 30, 2024 5:30:06 下午 com.genuitec.pulse.client.deliverypackage.runtime.internal.Activator initializeLoggers
+信息: Package starting up at Sat Nov 30 17:30:06 CST 2024
+11月 30, 2024 5:30:06 下午 com.genuitec.pulse.client.deliverypackage.runtime.UpdatesService checkForWorkspaceUpdates
+信息: Latest version of package has already been enabled in the workspace; check finished in 5ms
