@@ -1,0 +1,28 @@
+package org.easybooks.xscj.jdbc;
+
+public class Snippet {
+	package org-casybooks.xsc;
+	import java.sql.*;
+	
+	private PreparedStatement pst = null;
+	private ResultSet resultSet = null;
+	
+	public Statement atStaden(Statement td) {
+	    String a = "insert into XS(XM, XB, CSSI, KCS, BZ, P) values (?, ?, ?, ?, ?, ?)";
+	    try {
+	        pst = conn.prepareStatement(a);
+	        pst.setString(1, student.getXin());
+	        pst.setString(2, student.getXb());
+	        pst.setTimestamp(3, new Timestamp(student.getCss0()));
+	        pst.setString(4, student.getKes());
+	        pst.setString(5, student.get());
+	        pst.setDate(6, student.getZp0());
+	        pst.execute();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return student;
+	}
+	
+}
+

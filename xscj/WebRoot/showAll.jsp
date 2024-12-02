@@ -6,7 +6,7 @@
     <!-- 可以考虑增加meta标签确保浏览器正确识别UTF-8 -->
     <meta charset="UTF-8">
 </head>
-<body bgcolor="#D9DFAA"> <!-- 确保颜色代码前有# -->
+<body bgcolor="#BBDAF2"> <!-- 确保颜色代码前有# -->
     <s:action name="showAll" executeResult="true" />
 </body>
 </html>
