@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 overriddenByCSS=,sql_columns,sql_default,sql_keyword,sql_multi_line_comment,sql_single_line_comment,sql_string,sql_table,
+reconnectBrokenConnection=always
 sql_columns=121,171,255
 sql_default=216,216,216
 sql_keyword=141,203,226

@@ -1,4 +1,4 @@
-12æœˆ 01, 2024 1:00:00 ä¸Šåˆ com.genuitec.pulse.client.deliverypackage.runtime.internal.Activator initializeLoggers
-ä¿¡æ¯: Package starting up at Sun Dec 01 01:00:00 CST 2024
-12æœˆ 01, 2024 1:00:01 ä¸Šåˆ com.genuitec.pulse.client.deliverypackage.runtime.UpdatesService checkForWorkspaceUpdates
-ä¿¡æ¯: Latest version of package has already been enabled in the workspace; check finished in 2ms
+12ÔÂ 07, 2024 3:38:05 ÏÂÎç com.genuitec.pulse.client.deliverypackage.runtime.internal.Activator initializeLoggers
+ĞÅÏ¢: Package starting up at Sat Dec 07 15:38:05 HKT 2024
+12ÔÂ 07, 2024 3:38:05 ÏÂÎç com.genuitec.pulse.client.deliverypackage.runtime.UpdatesService checkForWorkspaceUpdates
+ĞÅÏ¢: Latest version of package has already been enabled in the workspace; check finished in 3ms

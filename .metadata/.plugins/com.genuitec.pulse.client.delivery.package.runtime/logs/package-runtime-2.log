@@ -1,4 +1,18 @@
-12æœˆ 01, 2024 1:07:55 ä¸Šåˆ com.genuitec.pulse.client.deliverypackage.runtime.internal.Activator initializeLoggers
-ä¿¡æ¯: Package starting up at Sun Dec 01 01:07:55 CST 2024
-12æœˆ 01, 2024 1:07:57 ä¸Šåˆ com.genuitec.pulse.client.deliverypackage.runtime.UpdatesService checkForWorkspaceUpdates
-ä¿¡æ¯: Latest version of package has already been enabled in the workspace; check finished in 2ms
+12ÔÂ 07, 2024 4:32:32 ÏÂÎç com.genuitec.pulse.client.deliverypackage.runtime.internal.Activator initializeLoggers
+ĞÅÏ¢: Package starting up at Sat Dec 07 16:32:32 HKT 2024
+12ÔÂ 07, 2024 4:32:35 ÏÂÎç com.genuitec.pulse.client.deliverypackage.runtime.UpdatesService checkForWorkspaceUpdates
+ĞÅÏ¢: Latest version of package has already been enabled in the workspace; check finished in 4ms
+12ÔÂ 07, 2024 4:35:56 ÏÂÎç org.eclipse.tm4e.core.registry.Registry _doLoadSingleGrammar
+¾¯¸æ: No grammar source for scope [source.smarty]
+12ÔÂ 07, 2024 4:35:56 ÏÂÎç org.eclipse.tm4e.core.registry.Registry _doLoadSingleGrammar
+¾¯¸æ: No grammar source for scope [source.python]
+12ÔÂ 07, 2024 4:35:56 ÏÂÎç org.eclipse.tm4e.core.internal.rule.RuleFactory _compilePatterns
+¾¯¸æ: CANNOT find grammar for scopeName [source.smarty]. I am [text.html.basic@org.eclipse.wildwebdeveloper]
+12ÔÂ 07, 2024 4:35:56 ÏÂÎç org.eclipse.tm4e.core.internal.rule.RuleFactory _compilePatterns
+¾¯¸æ: REMOVING BeginEndRule{id=25,name=null} ENTIRELY DUE TO EMPTY PATTERNS THAT ARE MISSING
+12ÔÂ 07, 2024 4:35:56 ÏÂÎç org.eclipse.tm4e.core.internal.rule.RuleFactory _compilePatterns
+¾¯¸æ: CANNOT find grammar for scopeName [source.python]. I am [text.html.basic@org.eclipse.wildwebdeveloper]
+12ÔÂ 07, 2024 4:35:56 ÏÂÎç org.eclipse.tm4e.core.internal.rule.RuleFactory _compilePatterns
+¾¯¸æ: REMOVING BeginEndRule{id=26,name=null} ENTIRELY DUE TO EMPTY PATTERNS THAT ARE MISSING
+12ÔÂ 07, 2024 4:35:56 ÏÂÎç org.eclipse.tm4e.core.internal.rule.RuleFactory _compilePatterns
+¾¯¸æ: CANNOT find rule for scopeName [#property-value]. I am [text.html.basic@org.eclipse.wildwebdeveloper]

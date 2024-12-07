@@ -1,4 +1,6 @@
 package org.easybooks.xscj.vo;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 public class Student implements java.io.Serializable {
     private String xm;        // 姓名
@@ -35,6 +37,10 @@ public class Student implements java.io.Serializable {
 
     public void setCssj(Date cssj) {
         this.cssj = cssj;
+    }
+    public void setCssj(String cssj) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        this.cssj = sdf.parse(cssj);
     }
 
     // kcs（课程数）属性的getter/setter方法

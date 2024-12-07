@@ -1,0 +1,127 @@
+package org.easybooks.xscj.jdbc;
+
+import java.sql.*;
+import org.easybooks.xscj.vo.Student;
+
+public class StudentJdbc {
+    private PreparedStatement psmt = null;
+    private ResultSet rs = null;
+
+    // 表名常量
+    private static final String TABLE_NAME = "XS";
+
+    // 连接数据库时检查表是否存在，如果不存在则创建
+    static {
+        checkAndCreateTable();
+    }
+
+    // 检查表是否存在，如果不存在则创建表
+    private static void checkAndCreateTable() {
+        String checkTableSql = "SELECT COUNT(*) FROM user_tables WHERE table_name = ?";
+        String createTableSql = "CREATE TABLE XS (" +
+                                "XM VARCHAR2(50), " +       // 姓名
+                                "XB VARCHAR2(2), " +        // 性别
+                                "CSSJ DATE, " +             // 出生时间
+                                "KCS INT, " +               // 已修课程数
+                                "BZ VARCHAR2(255), " +      // 备注
+                                "ZP BLOB" +                 // 照片
+                                ")";
+        try (Connection conn = OrclConn.conns; // 使用数据库连接
+             PreparedStatement psmt = conn.prepareStatement(checkTableSql)) {
+             
+            psmt.setString(1, TABLE_NAME.toUpperCase());
+            rs = psmt.executeQuery();
+            if (rs.next() && rs.getInt(1) == 0) {
+                // 如果表不存在，则创建表
+                try (PreparedStatement createPsmt = conn.prepareStatement(createTableSql)) {
+                    createPsmt.executeUpdate();
+                    System.out.println("表 " + TABLE_NAME + " 已创建。");
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // 录入学生
+    public Student addStudent(Student student) {
+        String sql = "insert into XS(XM, XB, CSSJ, KCS, BZ, ZP) values(?,?,?,?,?,?)";
+        try {
+            psmt = OrclConn.conns.prepareStatement(sql);
+            psmt.setString(1, student.getXm()); // 姓名
+            psmt.setString(2, student.getXb()); // 性别
+            psmt.setTimestamp(3, new Timestamp(student.getCssj().getTime())); // 出生时间
+            psmt.setInt(4, student.getKcs()); // 已修课程数
+            psmt.setString(5, student.getBz()); // 备注
+            psmt.setBytes(6, student.getZp()); // 照片
+            psmt.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student;
+    }
+
+    // 获取某个学生的照片
+    public byte[] getStudentZp(Student student) {
+        String sql = "select ZP from XS where XM ='" + student.getXm() + "'";
+        try {
+            psmt = OrclConn.conns.prepareStatement(sql);
+            rs = psmt.executeQuery();
+            if (rs.next()) {
+                student.setZp(rs.getBytes("ZP"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student.getZp();
+    }
+
+    // 删除学生
+    public Student delStudent(Student student) {
+        String sql = "delete from XS where XM ='" + student.getXm() + "'";
+        try {
+            psmt = OrclConn.conns.prepareStatement(sql);
+            psmt.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student;
+    }
+
+    // 查询学生
+    public Student showStudent(Student student) {
+        String sql = "select * from XS where XM ='" + student.getXm() + "'";
+        try {
+            psmt = OrclConn.conns.prepareStatement(sql);
+            rs = psmt.executeQuery();
+            if (rs.next()) {
+                student.setXb(rs.getString("XB"));
+                student.setCssj(rs.getDate("CSSJ"));
+                student.setKcs(rs.getInt("KCS"));
+                student.setZp(rs.getBytes("ZP"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student;
+    }
+
+    // 更新学生信息
+    public Student updateStudent(Student student) {
+        String sql = "update XS set XM=?, XB=?, CSSJ=?, KCS=?, BZ=?, ZP=? where XM = ?";
+        try {
+            psmt = OrclConn.conns.prepareStatement(sql);
+            psmt.setString(1, student.getXm());
+            psmt.setString(2, student.getXb());
+            psmt.setTimestamp(3, new Timestamp(student.getCssj().getTime()));
+            psmt.setInt(4, student.getKcs());
+            psmt.setString(5, student.getBz());
+            psmt.setBytes(6, student.getZp());
+            psmt.setString(7, student.getXm()); // 使用学生的姓名作为条件
+            psmt.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student;
+    }
+}

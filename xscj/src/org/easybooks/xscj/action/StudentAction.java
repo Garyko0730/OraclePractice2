@@ -1,6 +1,7 @@
 package org.easybooks.xscj.action;
 //**导入所需的类和包**
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.io.*;
 import org.apache.struts2.ServletActionContext;
@@ -22,65 +23,111 @@ public class StudentAction extends ActionSupport {
     //成绩对象
     private File photo;
     //照片
-
+  
+    
     //**addStu()方法实现录入学生信息**
     public String addStu() throws Exception {
-        //先检查XS表中是否存在该学生的记录
-        String sql = "select * from XS where XM ='" + getXm() + "'";
-        Statement stmt = OrclConn.conns.createStatement();
-        ResultSet rs = stmt.executeQuery(sql);
-        if (rs.next()) {
-            //如果结果集不为空表示该学生记录已经存在
-            setMsg("该学生已经存在！");
-            return "result";
+        if (OrclConn.conns == null) {
+            throw new IllegalStateException("数据库连接未正确初始化！");
         }
+
+        if (student == null) {
+            setMsg("学生数据未正确提交！");
+            return "error";
+        }
+
+        // 验证是否已经存在该学生记录
+        String sql = "SELECT COUNT(*) FROM XS WHERE XM = ?";
+        try (PreparedStatement stmt = OrclConn.conns.prepareStatement(sql)) {
+            stmt.setString(1, getXm());
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next() && rs.getInt(1) > 0) {
+                    setMsg("该学生已经存在！");
+                    System.out.println("学生已存在：" + getXm());
+                    return "success";
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            setMsg("检查学生记录时发生错误！");
+            return "error";
+        }
+
+        // 如果学生不存在，执行录入逻辑
         StudentJdbc studentJ = new StudentJdbc();
         Student stu = new Student();
-        /*通过“学生”值对象收集表单数据*/
         stu.setXm(getXm());
         stu.setXb(student.getXb());
         stu.setCssj(student.getCssj());
         stu.setKcs(student.getKcs());
         stu.setBz(student.getBz());
         
-        if(this.getPhoto()!= null) {
-            //有照片上传的情况
-            FileInputStream fis = new FileInputStream(this.getPhoto());
-            //创建文件输入流，用于读取图片内容
-            byte[] buffer = new byte[fis.available()];
-            fis.read(buffer);
-            stu.setZp(buffer);
+     
+        // 处理照片上传
+        if (this.getPhoto() != null) {
+            try (FileInputStream fis = new FileInputStream(this.getPhoto())) {
+                byte[] buffer = new byte[fis.available()];
+                fis.read(buffer);
+                stu.setZp(buffer);
+            } catch (Exception e) {
+                e.printStackTrace();
+                setMsg("处理上传照片时发生错误！");
+                return "error";
+            }
+        } else {
+            System.out.println("没有上传照片。");
+            stu.setZp(null);
         }
 
-        if(studentJ.addStudent(stu)!= null) {
+        if (studentJ.addStudent(stu) != null) {
             setMsg("添加成功！");
-            Map request = (Map)ActionContext.getContext().get("request");
-            //获取上下文请求对象
+            // 安全类型转换
+            Map<String, Object> request = (Map<String, Object>) ActionContext.getContext().get("request");
             request.put("student", stu);
+            // 打印表单数据以便调试
+            System.out.println("表单数据：");
+            System.out.println("学生姓名：" + stu.getXm());
+            System.out.println("学生性别：" + stu.getXb());
+            System.out.println("出生日期：" + stu.getCssj());
         } else {
             setMsg("添加失败，请检查输入信息！");
+            return "error";
         }
-        return "result";
-     }
-    
-    /** getImage()方法实现获取和显示当前学生的照片*/
-    public String getImage() throws Exception {
-        HttpServletResponse response = ServletActionContext.getResponse();
-        //创建Servlet响应对象
-        StudentJdbc studentJ = new StudentJdbc();
-        student = new Student();
-        student.setXm(getXm());
-        byte[] img = studentJ.getStudentZp(student);
-        response.setContentType("image/jpeg");
-        ServletOutputStream os = response.getOutputStream();
-        if (img!= null && img.length!= 0) {
-            for (int i = 0; i < img.length; i++) {
-                os.write(img[i]);
-            }
-        }
-        os.flush();
-        return NONE;
+
+        return "success";
     }
+
+    
+    /** getImage()方法实现获取和显示当前学生的照片 */
+    public String getImage() throws Exception {
+        HttpServletResponse response = ServletActionContext.getResponse(); // 获取响应对象
+        response.setContentType("image/jpeg"); // 设置响应的内容类型为 JPEG 图片
+
+        StudentJdbc studentJ = new StudentJdbc(); // 数据库操作类
+        Student student = new Student(); // 创建学生对象
+        student.setXm(getXm()); // 设置学生姓名
+
+        // 从数据库中获取照片
+        byte[] img = studentJ.getStudentZp(student);
+
+        try (ServletOutputStream os = response.getOutputStream()) { // 获取输出流
+            if (img != null && img.length > 0) {
+            	System.out.println("照片长度：" + img.length);
+                os.write(img); // 直接写入二进制数据
+            } else {
+                System.out.println("没有找到照片数据或照片为空。");
+                // 可以返回一个默认图片
+            }
+            os.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException("获取照片时发生错误！", e);
+        }
+
+        return NONE; // 不需要返回视图
+    }
+
+    
     /** delStu()方法实现删除学生信息*/
     public String delStu() throws Exception {
         //先检查XS表中是否存在该学生的记录
@@ -103,7 +150,7 @@ public class StudentAction extends ActionSupport {
             } else {
                 setMsg("该学生不存在！");
             }
-            return "result";
+        return "success";
         }
     
     /** queStu()方法实现查询学生信息*/
@@ -137,8 +184,10 @@ public class StudentAction extends ActionSupport {
         } else {
             setMsg("该学生不存在！");
         }
-        return "result";
+        return "success";
     }
+    
+    
     /** updStu()方法实现更新学生信息*/
     public String updStu() throws Exception {
         StudentJdbc studentJ = new StudentJdbc();
@@ -164,7 +213,7 @@ public class StudentAction extends ActionSupport {
         } else {
             setMsg("更新失败，请检查输入信息！");
         }
-        return "result";
+        return "success";
     }
     //**getter和setter方法**
     public String getXm() {

@@ -1,0 +1,164 @@
+package org.easybooks.xscj.jdbc;
+
+import java.sql.*;
+import org.easybooks.xscj.vo.Student;
+
+public class StudentJdbc {
+    private PreparedStatement psmt = null;
+    private ResultSet rs = null;
+
+
+    // 连接数据库时检查表是否存在，如果不存在则创建
+    static {
+        checkAndCreateTables();
+    }
+
+    private static void checkAndCreateTables() {
+        // 表的定义
+        String[] tableNames = {"STUDENT", "COURSE", "SCORE"};
+        String[] createTableSqls = {
+            // STUDENT 表的创建SQL
+            "CREATE TABLE STUDENT (" +
+            "XM VARCHAR2(50) PRIMARY KEY, " +  // 姓名，设为主键
+            "XB VARCHAR2(2), " +               // 性别
+            "CSSJ DATE, " +                    // 出生日期
+            "KCS NUMBER, " +                   // 课程数
+            "BZ VARCHAR2(255), " +             // 备注
+            "ZP BLOB " +                       // 照片
+            ")",
+            
+            // COURSE 表的创建SQL
+            "CREATE TABLE COURSE (" +
+            "KCM VARCHAR2(50) PRIMARY KEY, " + // 课程名，设为主键
+            "XS NUMBER, " +                    // 学时
+            "XF NUMBER " +                     // 学分
+            ")",
+
+            // SCORE 表的创建SQL
+            "CREATE TABLE SCORE (" +
+            "XM VARCHAR2(50), " +              // 姓名
+            "KCM VARCHAR2(50), " +             // 课程名
+            "CJ NUMBER, " +                    // 成绩
+            "PRIMARY KEY (XM, KCM), " +        // 联合主键
+            "CONSTRAINT FK_SCORE_STUDENT FOREIGN KEY (XM) REFERENCES STUDENT(XM), " +
+            "CONSTRAINT FK_SCORE_COURSE FOREIGN KEY (KCM) REFERENCES COURSE(KCM) " +
+            ")"
+        };
+
+        // 检查和创建表
+        try (Connection conn = OrclConn.conns) {  // 使用数据库连接
+            for (int i = 0; i < tableNames.length; i++) {
+                String tableName = tableNames[i];
+                String createTableSql = createTableSqls[i];
+
+                // 查询表是否存在的SQL
+                String checkTableSql = "SELECT COUNT(*) FROM user_tables WHERE UPPER(table_name) = ?";
+                try (PreparedStatement psmt = conn.prepareStatement(checkTableSql)) {
+                    // 确保表名是大写，避免大小写问题
+                    psmt.setString(1, tableName.toUpperCase());
+                    try (ResultSet rs = psmt.executeQuery()) {
+                        if (rs.next() && rs.getInt(1) == 0) {
+                            // 如果表不存在，则创建表
+                            try (PreparedStatement createPsmt = conn.prepareStatement(createTableSql)) {
+                                createPsmt.executeUpdate();
+                                System.out.println("表 " + tableName + " 已创建。");
+                            } catch (SQLException createEx) {
+                                System.out.println("创建表 " + tableName + " 时出错: " + createEx.getMessage());
+                                createEx.printStackTrace();
+                            }
+                        } else {
+                            System.out.println("表 " + tableName + " 已存在，无需创建。");
+                        }
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("检查表是否存在时出错: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+
+
+    // 录入学生
+    public Student addStudent(Student student) {
+        String sql = "insert into XS(XM, XB, CSSJ, KCS, BZ, ZP) values(?,?,?,?,?,?)";
+        try {
+            psmt = OrclConn.conns.prepareStatement(sql);
+            psmt.setString(1, student.getXm()); // 姓名
+            psmt.setString(2, student.getXb()); // 性别
+            psmt.setTimestamp(3, new Timestamp(student.getCssj().getTime())); // 出生时间
+            psmt.setInt(4, student.getKcs()); // 已修课程数
+            psmt.setString(5, student.getBz()); // 备注
+            psmt.setBytes(6, student.getZp()); // 照片
+            psmt.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student;
+    }
+
+    // 获取某个学生的照片
+    public byte[] getStudentZp(Student student) {
+        String sql = "select ZP from XS where XM ='" + student.getXm() + "'";
+        try {
+            psmt = OrclConn.conns.prepareStatement(sql);
+            rs = psmt.executeQuery();
+            if (rs.next()) {
+                student.setZp(rs.getBytes("ZP"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student.getZp();
+    }
+
+    // 删除学生
+    public Student delStudent(Student student) {
+        String sql = "delete from XS where XM ='" + student.getXm() + "'";
+        try {
+            psmt = OrclConn.conns.prepareStatement(sql);
+            psmt.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student;
+    }
+
+    // 查询学生
+    public Student showStudent(Student student) {
+        String sql = "select * from XS where XM ='" + student.getXm() + "'";
+        try {
+            psmt = OrclConn.conns.prepareStatement(sql);
+            rs = psmt.executeQuery();
+            if (rs.next()) {
+                student.setXb(rs.getString("XB"));
+                student.setCssj(rs.getDate("CSSJ"));
+                student.setKcs(rs.getInt("KCS"));
+                student.setZp(rs.getBytes("ZP"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student;
+    }
+
+    // 更新学生信息
+    public Student updateStudent(Student student) {
+        String sql = "update XS set XM=?, XB=?, CSSJ=?, KCS=?, BZ=?, ZP=? where XM = ?";
+        try {
+            psmt = OrclConn.conns.prepareStatement(sql);
+            psmt.setString(1, student.getXm());
+            psmt.setString(2, student.getXb());
+            psmt.setTimestamp(3, new Timestamp(student.getCssj().getTime()));
+            psmt.setInt(4, student.getKcs());
+            psmt.setString(5, student.getBz());
+            psmt.setBytes(6, student.getZp());
+            psmt.setString(7, student.getXm()); // 使用学生的姓名作为条件
+            psmt.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return student;
+    }
+}

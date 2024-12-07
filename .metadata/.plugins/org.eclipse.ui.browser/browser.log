@@ -17,3 +17,161 @@
 11月 30, 2024 18:31:14.61 Created TensorFlow Lite XNNPACK delegate for CPU.
 11月 30, 2024 18:31:14.90 [10560:22364:1130/183114.890:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
 11月 30, 2024 18:31:40.74 [10560:22364:1130/183140.740:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+
+12月 05, 2024 20:28:06.29 NEW SESSION
+12月 05, 2024 20:28:06.30 [29848:13336:1205/202806.280:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:28:06.40 Created TensorFlow Lite XNNPACK delegate for CPU.
+12月 05, 2024 20:28:31.81 [29848:13336:1205/202831.813:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:29:29.70 [29848:13336:1205/202929.703:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:30:00.59 [29848:13336:1205/203000.590:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 20:30:57.34 Created TensorFlow Lite XNNPACK delegate for CPU.
+12月 05, 2024 20:30:57.71 [20260:16216:1205/203057.710:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:31:21.96 [20260:16216:1205/203121.961:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:32:00.89 [20260:16216:1205/203200.889:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 20:32:10.01 [20260:16216:1205/203210.017:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:32:44.26 Created TensorFlow Lite XNNPACK delegate for CPU.
+12月 05, 2024 20:32:44.58 [29072:30592:1205/203244.586:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:33:11.01 [29072:30592:1205/203311.011:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:34:01.40 [29072:30592:1205/203401.405:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 20:34:07.50 [29072:30592:1205/203407.507:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:35:16.89 Created TensorFlow Lite XNNPACK delegate for CPU.
+12月 05, 2024 20:35:17.05 [30152:7636:1205/203517.055:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:35:41.04 [30152:7636:1205/203541.045:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:36:35.14 [30152:7636:1205/203635.147:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:37:02.06 [30152:7636:1205/203702.069:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 20:38:04.76 [30152:7636:1205/203804.760:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:39:02.53 [30152:7636:1205/203902.537:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 20:41:02.65 [30152:7636:1205/204102.651:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 20:41:30.13 [30152:7636:1205/204130.131:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:43:03.37 [30152:7636:1205/204303.369:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 20:55:18.62 Created TensorFlow Lite XNNPACK delegate for CPU.
+12月 05, 2024 20:55:18.95 [2616:13496:1205/205518.957:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:55:45.11 [2616:13496:1205/205545.111:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:56:30.16 [2616:13496:1205/205630.165:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:58:04.94 [2616:13496:1205/205804.947:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 20:58:06.38 [2616:13496:1205/205806.386:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 20:59:06.99 [2616:13496:1205/205906.994:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:01:06.99 [2616:13496:1205/210106.991:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:01:08.07 [2616:13496:1205/210108.075:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 21:03:08.04 [2616:13496:1205/210308.041:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:04:33.08 Created TensorFlow Lite XNNPACK delegate for CPU.
+12月 05, 2024 21:04:33.80 [27060:1240:1205/210433.801:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 21:04:54.09 [27060:1240:1205/210454.092:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 21:05:35.43 [27060:1240:1205/210535.438:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 21:06:09.21 [27060:1240:1205/210609.213:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:07:02.54 [27060:1240:1205/210702.540:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 21:08:09.78 [27060:1240:1205/210809.784:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:10:09.54 [27060:1240:1205/211009.547:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:10:52.71 [27060:1240:1205/211052.717:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 21:12:10.68 [27060:1240:1205/211210.688:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:13:13.72 [27060:1240:1205/211313.725:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:15:11.67 [27060:1240:1205/211511.670:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:17:12.27 [27060:1240:1205/211712.278:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:17:22.47 [27060:1240:1205/211722.471:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 05, 2024 21:18:16.49 [27060:1240:1205/211816.493:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:20:12.93 [27060:1240:1205/212012.938:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:20:42.94 [27060:1240:1205/212042.946:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -7
+12月 05, 2024 21:22:12.62 [27060:1240:1205/212212.622:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:23:13.62 [27060:1240:1205/212313.623:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:25:12.88 [27060:1240:1205/212512.879:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:26:14.24 [27060:1240:1205/212614.248:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:28:14.68 [27060:1240:1205/212814.684:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:30:14.43 [27060:1240:1205/213014.431:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:31:15.30 [27060:1240:1205/213115.309:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:33:15.78 [27060:1240:1205/213315.785:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:34:21.96 [27060:1240:1205/213421.967:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:36:16.60 [27060:1240:1205/213616.608:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:38:17.13 [27060:1240:1205/213817.135:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:40:17.82 [27060:1240:1205/214017.824:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:42:18.10 [27060:1240:1205/214218.101:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:44:18.30 [27060:1240:1205/214418.304:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:46:18.78 [27060:1240:1205/214618.780:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:48:18.91 [27060:1240:1205/214818.919:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:50:19.15 [27060:1240:1205/215019.152:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:51:20.07 [27060:1240:1205/215120.071:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:53:20.13 [27060:1240:1205/215320.129:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:54:21.06 [27060:1240:1205/215421.064:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:56:21.21 [27060:1240:1205/215621.212:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 21:58:21.20 [27060:1240:1205/215821.203:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:00:22.35 [27060:1240:1205/220022.351:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:02:23.15 [27060:1240:1205/220223.155:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:04:23.62 [27060:1240:1205/220423.621:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:06:23.60 [27060:1240:1205/220623.599:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:07:24.47 [27060:1240:1205/220724.473:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:08:25.16 [27060:1240:1205/220825.167:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:10:25.04 [27060:1240:1205/221025.040:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:12:25.86 [27060:1240:1205/221225.866:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:14:26.71 [27060:1240:1205/221426.713:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:16:27.68 [27060:1240:1205/221627.681:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:18:27.86 [27060:1240:1205/221827.860:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:20:28.42 [27060:1240:1205/222028.427:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 05, 2024 22:20:58.43 [27060:1240:1205/222058.434:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -7
+12月 05, 2024 22:21:53.64 [27060:1240:1205/222153.641:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -7
+12月 05, 2024 22:23:12.49 [27060:1240:1205/222312.492:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -7
+12月 05, 2024 22:25:33.87 [27060:1240:1205/222533.874:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -7
+12月 05, 2024 22:28:44.09 [27060:1240:1205/222844.095:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -100
+12月 05, 2024 22:36:20.57 [27060:1240:1205/223620.574:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -100
+
+12月 05, 2024 23:31:15.53 NEW SESSION
+12月 05, 2024 23:31:15.54 Created TensorFlow Lite XNNPACK delegate for CPU.
+12月 05, 2024 23:31:25.48 [5860:1044:1205/233125.483:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -100
+12月 05, 2024 23:31:25.55 [5860:32568:1205/233125.555:ERROR:soda_component_installer.cc(103)] On demand update of the SODA component failed with error: 5
+12月 05, 2024 23:31:25.55 [5860:32568:1205/233125.555:ERROR:soda_language_pack_component_installer.cc(88)] On demand update of the SODA language component failed with error: 5
+12月 05, 2024 23:31:25.55 [5860:1044:1205/233125.556:ERROR:registration_request.cc(274)] Registration URL fetching failed.
+12月 05, 2024 23:31:49.56 [5860:1044:1205/233149.562:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+
+12月 07, 2024 22:05:29.08 NEW SESSION
+12月 07, 2024 22:05:29.09 Created TensorFlow Lite XNNPACK delegate for CPU.
+12月 07, 2024 22:05:29.77 [29520:11816:1207/220529.769:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 07, 2024 22:05:50.38 [29520:11816:1207/220550.385:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 07, 2024 22:06:38.52 [29520:11816:1207/220638.526:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 07, 2024 22:07:05.08 [29520:11816:1207/220705.088:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:07:11.17 [29520:11816:1207/220711.174:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -100
+12月 07, 2024 22:08:06.46 [29520:11816:1207/220806.467:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 07, 2024 22:10:08.03 [29520:11816:1207/221008.032:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:11:53.30 [29520:11816:1207/221153.306:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 07, 2024 22:12:04.72 [29520:11816:1207/221204.722:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:14:04.98 [29520:11816:1207/221404.985:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:15:06.00 [29520:11816:1207/221506.006:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:17:06.08 [29520:11816:1207/221706.085:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:17:25.04 [29520:11816:1207/221725.039:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 07, 2024 22:18:07.52 [29520:11816:1207/221807.526:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:19:08.83 [29520:11816:1207/221908.839:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:21:06.92 [29520:11816:1207/222106.920:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:22:08.42 [29520:11816:1207/222208.424:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:23:13.13 [29520:11816:1207/222313.137:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:25:08.22 [29520:11816:1207/222508.225:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:27:07.42 [29520:11816:1207/222707.427:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:28:08.83 [29520:11816:1207/222808.835:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:30:09.19 [29520:11816:1207/223009.193:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:32:10.01 [29520:11816:1207/223210.010:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:34:10.34 [29520:11816:1207/223410.347:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:35:10.80 [29520:11816:1207/223510.804:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:37:11.11 [29520:11816:1207/223711.119:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:38:45.15 [29520:11816:1207/223845.159:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:40:11.25 [29520:11816:1207/224011.249:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:41:12.10 [29520:11816:1207/224112.101:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:43:12.18 [29520:11816:1207/224312.182:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:45:12.33 [29520:11816:1207/224512.338:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:46:13.02 [29520:11816:1207/224613.026:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:48:12.54 [29520:11816:1207/224812.544:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:49:13.43 [29520:11816:1207/224913.429:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:50:23.34 [29520:11816:1207/225023.339:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:52:14.13 [29520:11816:1207/225214.133:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:53:21.61 [29520:11816:1207/225321.616:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:55:14.39 [29520:11816:1207/225514.395:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:57:15.14 [29520:11816:1207/225715.142:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 22:59:15.49 [29520:11816:1207/225915.498:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:01:16.01 [29520:11816:1207/230116.017:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:03:14.77 [29520:11816:1207/230314.774:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:04:16.45 [29520:11816:1207/230416.455:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:06:16.71 [29520:11816:1207/230616.712:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:07:17.47 [29520:11816:1207/230717.469:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:09:17.67 [29520:11816:1207/230917.674:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:11:17.63 [29520:11816:1207/231117.632:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:13:17.72 [29520:11816:1207/231317.726:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:14:18.28 [29520:11816:1207/231418.288:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:15:18.76 [29520:11816:1207/231518.768:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:17:18.49 [29520:11816:1207/231718.498:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:18:19.79 [29520:11816:1207/231819.789:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 07, 2024 23:20:19.82 [29520:11816:1207/232019.825:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2

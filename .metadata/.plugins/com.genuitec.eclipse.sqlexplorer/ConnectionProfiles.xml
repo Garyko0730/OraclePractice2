@@ -1,8 +1,8 @@
 <Beans>
     <Bean Class="com.genuitec.eclipse.sqlexplorer.utils.ConnectionProfile">
-        <activate>true</activate>
+        <activate>false</activate>
         <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
-            <string>-72c434f7:1937c0244b2:-7f77</string>
+            <string>-15fc1a96:19387033b8d:-7f71</string>
         </driverIdentifier>
         <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
             <string>-76c222a3:1937c3c21b3:-7fce</string>
@@ -14,21 +14,5 @@
         <schemaDisplayPolicy>0</schemaDisplayPolicy>
         <url>jdbc:oracle:thin:@//localhost:1521/XSCJ</url>
         <userName>SYSTEM</userName>
-    </Bean>
-    <Bean Class="com.genuitec.eclipse.sqlexplorer.utils.ConnectionProfile">
-        <activate>false</activate>
-        <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
-            <string>5d15bd5:1937871fce6:-7fd4</string>
-        </driverIdentifier>
-        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
-            <string>5d15bd5:1937871fce6:-7fd3</string>
-        </identifier>
-        <name>MyEclipse Derby</name>
-        <password encryption="true">gFOjO/OmrJ8m4/rtM2cMIw==</password>
-        <promptForPassword>false</promptForPassword>
-        <schema Indexed="true"/>
-        <schemaDisplayPolicy>0</schemaDisplayPolicy>
-        <url>jdbc:derby://localhost:1527/myeclipse</url>
-        <userName>classiccars</userName>
     </Bean>
 </Beans>

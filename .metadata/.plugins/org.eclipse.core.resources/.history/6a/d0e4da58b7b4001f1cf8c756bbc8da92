@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC 
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+    "./struts-2.0.dtd">
+<struts>
+
+    <package name="default" namespace="/" extends="struts-default">
+	    
+         <!-- 学生管理相关的动作 -->
+        <!-- 录入学生 -->
+        <action name="addStu" class="org.easybooks.xscj.action.StudentAction" method="addStu">
+            <result name="success">/studentManage.jsp</result>
+            <result name="input">/studentManage.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        
+        <!-- 获取照片 -->
+        <action name="getImage" class="org.easybooks.xscj.action.StudentAction" method="getImage"/>
+
+        
+        <!-- 删除学生 -->
+        <action name="delStu" class="org.easybooks.xscj.action.StudentAction" method="delStu">
+            <result name="success">/studentManage.jsp</result>
+            <result name="input">/studentManage.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        
+        <!-- 查找学生 -->
+        <action name="queStu" class="org.easybooks.xscj.action.StudentAction" method="queStu">
+            <result name="success">/studentManage.jsp</result>
+            <result name="input">/studentManage.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        
+        <!-- 更新学生 -->
+        <action name="updStu" class="org.easybooks.xscj.action.StudentAction" method="updStu">
+            <result name="success">/studentManage.jsp</result>
+            <result name="input">/studentManage.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+       <!-- 查询某门课成绩 -->
+        <action name="queSco" class="org.easybooks.xscj.action.ScoreAction" method="queSco">
+            <result name="success">/showAll.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        
+        <!-- 录入成绩 -->
+        <action name="addSco" class="org.easybooks.xscj.action.ScoreAction" method="addSco">
+            <result name="success">/scoreManage.jsp</result>
+            <result name="reject">/showAll.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        
+        <!-- 删除成绩 -->
+        <action name="delSco" class="org.easybooks.xscj.action.ScoreAction" method="delSco">
+            <result name="success">/scoreManage.jsp</result>
+            <result name="reject">/showAll.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        
+        <!-- 加载课程名 -->
+        <action name="showAll" class="org.easybooks.xscj.action.ScoreAction" method="showAll">
+            <result name="success">scoreManage.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+    </package>
+
+    <!-- 文件上传临时保存目录 -->
+    <constant name="struts.multipart.saveDir" value="C:/temp"/>
+    <!-- 禁止动态方法调用 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+
+</struts>

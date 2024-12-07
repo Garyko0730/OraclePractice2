@@ -50,20 +50,6 @@
         <url>jdbc:derby://&lt;server&gt;[:&lt;port&gt;]/&lt;databaseName&gt;[;&lt;URL attribute&gt;=&lt;value&gt;]</url>
     </Bean>
     <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
-        <driverClassName>oracle.jdbc.driver.OracleDriver</driverClassName>
-        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
-            <string>-72c434f7:1937c0244b2:-7f76</string>
-        </identifier>
-        <jarFileName/>
-        <jarFileNames Indexed="true">
-            <Bean Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.StringWrapper">
-                <string>D:\oracle12c\ojdbc7.jar</string>
-            </Bean>
-        </jarFileNames>
-        <name>Oracle Thin Driver01</name>
-        <url>jdbc:oracle:thin:@&lt;server&gt;[:&lt;1521&gt;]:&lt;XSCJ&gt;</url>
-    </Bean>
-    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
         <driverClassName>com.ingres.jdbc.IngresDriver</driverClassName>
         <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
             <string>-76</string>
@@ -298,20 +284,6 @@
         <url>jdbc:postgresql:[&lt;//host&gt;[:&lt;5432&gt;/]]&lt;database&gt;</url>
     </Bean>
     <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
-        <driverClassName>org.apache.derby.jdbc.ClientDriver</driverClassName>
-        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
-            <string>5d15bd5:1937871fce6:-7fd4</string>
-        </identifier>
-        <jarFileName/>
-        <jarFileNames Indexed="true">
-            <Bean Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.StringWrapper">
-                <string>C:\Users\Gary\.myeclipse\libs\derby_10.10.2.0\derbyclient.jar</string>
-            </Bean>
-        </jarFileNames>
-        <name>MyEclipse Derby</name>
-        <url>jdbc:derby://&lt;host&gt;:&lt;port&gt;/&lt;db&gt;</url>
-    </Bean>
-    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
         <driverClassName>com.reliersoft.sforce.jdbc.Driver</driverClassName>
         <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
             <string>-64</string>
@@ -372,6 +344,23 @@
         <url>jdbc:sybase:Tds:&lt;host&gt;:&lt;port&gt;/&lt;DBNAME&gt;</url>
     </Bean>
     <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
+        <driverClassName>oracle.jdbc.OracleDriver</driverClassName>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-15fc1a96:19387033b8d:-7f72</string>
+        </identifier>
+        <jarFileName/>
+        <jarFileNames Indexed="true">
+            <Bean Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.StringWrapper">
+                <string>D:\oracle12c\ojdbc7.jar</string>
+            </Bean>
+            <Bean Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.StringWrapper">
+                <string>D:\apps\Tomcat9.0\lib\ojdbc7.jar</string>
+            </Bean>
+        </jarFileNames>
+        <name>MyEclipseDriverName</name>
+        <url>jdbc:oracle:thin:@//localhost:1521/XSCJ</url>
+    </Bean>
+    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
         <driverClassName>com.ddtek.jdbc.openedge.OpenEdgeDriver</driverClassName>
         <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
             <string>-66</string>
@@ -410,6 +399,20 @@
         <jarFileNames Indexed="true"/>
         <name>IBM DB2 App Driver</name>
         <url>jdbc:db2:&lt;dbname&gt;</url>
+    </Bean>
+    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
+        <driverClassName>oracle.jdbc.OracleDriver</driverClassName>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-15fc1a96:19387033b8d:-7f71</string>
+        </identifier>
+        <jarFileName/>
+        <jarFileNames Indexed="true">
+            <Bean Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.StringWrapper">
+                <string>D:\apps\Tomcat9.0\lib\ojdbc7.jar</string>
+            </Bean>
+        </jarFileNames>
+        <name>MyEclipseDriverName0</name>
+        <url>jdbc:oracle:thin:@//localhost:1521/XSCJ</url>
     </Bean>
     <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
         <driverClassName>net.sourceforge.jtds.jdbc.Driver</driverClassName>

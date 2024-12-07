@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">  <!-- 设置字符编码为 UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式布局 -->
+    <title>内容网页</title>
+</head>
+<body topMargin="0" leftMargin="0" bottomMargin="0" rightMargin="0">
+    <img src="images/HomePage.png" width="678" height="550" alt="首页图片">
+</body>
+</html>
