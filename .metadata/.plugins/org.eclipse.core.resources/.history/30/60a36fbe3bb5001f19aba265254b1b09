@@ -1,0 +1,127 @@
+package org.easybooks.xscj.action;
+//**Action所在的包**
+//**导入所需的类和包**
+import java.util.*;
+import java.sql.*;
+import org.easybooks.xscj.jdbc.*;
+import org.easybooks.xscj.vo.*;
+import com.opensymphony.xwork2.*;
+
+public class ScoreAction extends ActionSupport {
+    private String xm; // 姓名
+    private int cj; // 成绩
+    private String msg; // 页面操作的消息提示文字
+    private Score score; // 成绩对象
+
+    // **showAll()方法实现预加载信息（课程名）**
+    public String showAll() {
+    	System.out.println("showAll method called");
+        Map<String, Object> request = (Map<String, Object>) ActionContext.getContext().get("request");
+        request.put("courseList", allCou());
+        return "success"; // 与 struts.xml 对应
+    }
+
+
+    // **queSco()方法实现查询某门课的成绩**
+    public String queSco() {
+        Map<String, Object> request = (Map<String, Object>) ActionContext.getContext().get("request");
+        request.put("kcscoreList", curSco());
+        return "success"; // 与 struts.xml 对应
+    }
+
+    // **addSco()方法实现录入成绩**
+    public String addSco() throws Exception {
+        String sql = "select * from CJ where XM ='" + getXm() + "' and KCM ='" + score.getKcm() + "'";
+        Statement stmt = OrclConn.conns.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        if (rs.next()) {
+            setMsg("该记录已经存在！");
+            return "reject"; // 与 struts.xml 对应
+        }
+        ScoreJdbc scoreJ = new ScoreJdbc();
+        Score sco = new Score();
+        sco.setXm(getXm());
+        sco.setKcm(score.getKcm());
+        sco.setCj(getCj());
+        if (scoreJ.addScore(sco) != null) {
+            setMsg("录入成功！");
+        } else {
+            setMsg("录入失败，请确保有此学生！");
+        }
+        Map<String, Object> request = (Map<String, Object>) ActionContext.getContext().get("request");
+        request.put("courseList", allCou());
+        request.put("kcscoreList", curSco());
+        return "success"; // 与 struts.xml 对应
+    }
+
+    // **delSco()方法实现删除成绩**
+    public String delSco() throws Exception {
+        String sql = "select * from CJ where XM ='" + getXm() + "' and KCM ='" + score.getKcm() + "'";
+        Statement stmt = OrclConn.conns.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        if (!rs.next()) {
+            setMsg("该记录不存在！");
+            return "reject"; // 与 struts.xml 对应
+        }
+        ScoreJdbc scoreJ = new ScoreJdbc();
+        Score sco = new Score();
+        sco.setXm(getXm());
+        sco.setKcm(score.getKcm());
+        if (scoreJ.delScore(sco) != null) {
+            setMsg("删除成功！");
+        } else {
+            setMsg("删除失败，请检查操作权限！");
+        }
+        Map<String, Object> request = (Map<String, Object>) ActionContext.getContext().get("request");
+        request.put("courseList", allCou());
+        request.put("kcscoreList", curSco());
+        return "success"; // 与 struts.xml 对应
+    }
+
+    // **加载课程名列表（用于刷新页面）**
+    public List<Course> allCou() {
+        ScoreJdbc scoreJ = new ScoreJdbc();
+        return scoreJ.showCourse();
+    }
+
+    // **加载当前课的成绩表（用于刷新页面）**
+    public List<Score> curSco() {
+        ScoreJdbc scoreJ = new ScoreJdbc();
+        Score kcsco = new Score();
+        kcsco.setKcm(score.getKcm());
+        return scoreJ.queScore(kcsco);
+    }
+
+    // **getter和setter方法**
+    public String getXm() {
+        return xm;
+    }
+
+    public void setXm(String xm) {
+        this.xm = xm;
+    }
+
+    public int getCj() {
+        return cj;
+    }
+
+    public void setCj(int cj) {
+        this.cj = cj;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public Score getScore() {
+        return score;
+    }
+
+    public void setScore(Score score) {
+        this.score = score;
+    }
+}

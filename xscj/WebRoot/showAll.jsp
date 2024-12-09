@@ -7,6 +7,6 @@
     <meta charset="UTF-8">
 </head>
 <body bgcolor="#BBDAF2"> <!-- 确保颜色代码前有# -->
-    <s:action name="showAll" executeResult="true" />
+    <s:action namespace="/xscj" name="showAll" executeResult="true" />
 </body>
 </html>

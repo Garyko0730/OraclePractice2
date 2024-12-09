@@ -3,8 +3,9 @@
 <html>
 <head>
   <title>成绩管理</title>
-<script>"undefined"==typeof CODE_LIVE&&(!function(e){var t={nonSecure:"13645",secure:"13646"},c={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=c[n]+r[n]+":"+t[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document),CODE_LIVE=!0);</script></head>
-<body bbgcolor="BBDAF2" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-6" data-genuitec-path="/xscj/WebRoot/scoreManage.jsp">
+</head>
+<body style="background-color: #BBDAF2;">
+
   <s:set name="student" value="#request.student"/>
   <s:form name="frm" method="post" enctype="multipart/form-data">
     <Table>
@@ -28,13 +29,14 @@
               return unescape(arr[2]);
             }
           </script>
-          <select name="score.km" id="select_1" onclick="setCookie('select_1', this.selectedIndex)">
+          <select name="score.kcm" id="select_1" onclick="setCookie('select_1', this.selectedIndex)">
             <option selected="selected">请选择</option>
-            <s:iterator id="cou" value="#request.courseList">
-            	<option value="<s:property value="#cou.km"/>">
-            			<s:property value="#cou.km"/>
+          	<s:iterator value="#request.courseList" var="course">
+            	<option value="<s:property value='kcm'/>">
+            			<s:property value="kcm"/>
             		</option>
 			</s:iterator>
+
 		</select>
 		<script type="text/javascript">
   			var selectedIndex = getCookie("select_1");
@@ -80,19 +82,21 @@
 </body>
 </html>
 <script type="text/javascript">
-  function que() {
-    // que()方法查询某门课的成绩
-	  document.frm.action = "queSco.action";
-	  document.frm.submit();
+function que() {
+    // 查询某门课的成绩
+	document.frm.action = "queSco";
+	document.frm.submit();
+  }
 
-	  function add() {
-	    document.frm.action = "addSco.action";
-	    document.frm.submit();
-	  }
+  function add() {
+    // 录入成绩
+    document.frm.action = "addSco";
+    document.frm.submit();
+  }
 
-	  function del() {
-	    document.frm.action = "delSco.action";
-	    document.frm.submit();
-	  }
+  function del() {
+    // 删除成绩
+    document.frm.action = "delSco";
+    document.frm.submit();
   }
 </script>

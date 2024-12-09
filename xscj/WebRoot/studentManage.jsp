@@ -66,35 +66,37 @@
                 </td>
                 <td>
                 
-                    <!-- 学生成绩信息部分 -->
-                    <table>
-                        <tr>
-                            <td>已修课程：</td>
-                            <td>
-                                <input type="text" name="student.kcs" value="<s:property value="#student.kcs"/>"  disabled/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="left">
-                                <table border="1">
-                                    <tr bgcolor="#CCCCC0">
-                                        <td>课程名称</td>
-                                        <td align="center">成绩</td>
-                                    </tr>
-                                    <!-- 迭代成绩列表 -->
-                                    <s:iterator value="#request.scoreList" id="sco">
-                                        <tr>
-                                            <td><s:property value="#sco.kcm"/>$nbsp;</td>
-                                            <td align="center"><s:property value="#sco.cj"/></td>
-                                        </tr>
-                                    </s:iterator>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+       
+			<!-- 学生成绩信息部分 -->
+			<table style="width: 100%; margin-left: 0; margin-right: 0; vertical-align: top;">
+			    <tr>
+			        <td>已修课程：</td>
+			        <td>
+			            <s:property value="#student.kcs"/>
+			        </td>
+			    </tr>
+			    <tr>
+			        <td align="left" style="width: 100%; vertical-align: top;">
+			            <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; text-align: left; vertical-align: top;">
+			                <tr bgcolor="#CCCCC0">
+			                    <td style="width: 70%; vertical-align: top;">课程名称</td>
+			                    <td style="width: 30%; text-align: center; vertical-align: top;">成绩</td>
+			                </tr>
+			                <!-- 迭代成绩列表 -->
+			                <s:iterator value="#request.scoreList" id="sco">
+			                    <tr>
+			                        <td style="vertical-align: top;"><s:property value="#sco.kcm" escape="true"/></td>
+			                        <td style="text-align: center; vertical-align: top;"><s:property value="#sco.cj"/></td>
+			                    </tr>
+			                </s:iterator>
+			            </table>
+			        </td>
+			    </tr>
+			</table>
+
+
+
+
 
         <!-- 显示信息 -->
         <s:property value="msg"/>

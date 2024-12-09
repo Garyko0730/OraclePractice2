@@ -175,3 +175,32 @@
 12月 07, 2024 23:17:18.49 [29520:11816:1207/231718.498:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
 12月 07, 2024 23:18:19.79 [29520:11816:1207/231819.789:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
 12月 07, 2024 23:20:19.82 [29520:11816:1207/232019.825:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+
+12月 08, 2024 24:39:22.65 NEW SESSION
+12月 08, 2024 24:39:22.66 Created TensorFlow Lite XNNPACK delegate for CPU.
+12月 08, 2024 24:39:22.92 [20284:32288:1208/003922.914:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 08, 2024 24:39:50.58 [20284:32288:1208/003950.584:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 08, 2024 24:40:35.98 [20284:32288:1208/004035.984:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:40:39.16 [20284:32288:1208/004039.162:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 08, 2024 24:41:36.52 [20284:32288:1208/004136.524:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:42:17.24 [20284:32288:1208/004217.245:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 08, 2024 24:43:36.66 [20284:32288:1208/004336.667:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:44:37.31 [20284:32288:1208/004437.316:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:45:47.69 [20284:32288:1208/004547.695:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 08, 2024 24:46:37.72 [20284:32288:1208/004637.728:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:48:37.63 [20284:32288:1208/004837.630:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:50:37.73 [20284:32288:1208/005037.731:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:51:38.58 [20284:32288:1208/005138.587:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:51:58.72 [20284:32288:1208/005158.722:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+12月 08, 2024 24:53:38.50 [20284:32288:1208/005338.508:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:54:38.95 [20284:32288:1208/005438.950:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:56:39.25 [20284:32288:1208/005639.252:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:58:39.32 [20284:32288:1208/005839.327:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 24:59:39.89 [20284:32288:1208/005939.895:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 01:01:40.19 [20284:32288:1208/010140.193:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 01:03:40.41 [20284:32288:1208/010340.414:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 01:05:40.52 [20284:32288:1208/010540.528:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 01:06:40.98 [20284:32288:1208/010640.985:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 01:08:41.47 [20284:32288:1208/010841.473:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 01:10:04.87 [20284:32288:1208/011004.876:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+12月 08, 2024 01:11:41.99 [20284:32288:1208/011141.998:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2

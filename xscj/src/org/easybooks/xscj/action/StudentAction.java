@@ -153,40 +153,63 @@ public class StudentAction extends ActionSupport {
         return "success";
         }
     
-    /** queStu()方法实现查询学生信息*/
+    /** queStu()方法实现查询学生信息 */
     public String queStu() throws Exception {
-        //先检查XS表中是否存在该学生的记录
         boolean exist = false;
-        String sql = "select * from XS where XM ='" + getXm() + "'";
-        Statement stmt = OrclConn.conns.createStatement();
-        ResultSet rs = stmt.executeQuery(sql);
-        if (rs.next()) {
-            exist = true;
+
+        // 检查学生是否存在于XS表中
+        String sql = "SELECT * FROM XS WHERE XM = ?";
+        try (PreparedStatement stmt = OrclConn.conns.prepareStatement(sql)) {
+            stmt.setString(1, getXm());
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                exist = true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            setMsg("系统错误，检查学生记录失败！");
+            return "error";
         }
+
         if (exist) {
-            //如果存在则进行查询操作
+            // 查询学生基本信息
             StudentJdbc studentJ = new StudentJdbc();
             Student stu = new Student();
             stu.setXm(getXm());
-            if (studentJ.showStudent(stu)!= null) {
+
+            if (studentJ.showStudent(stu) != null) {
                 setMsg("查询成功！");
-                Map request = (Map) ActionContext.getContext().get("request");
+                Map<String, Object> request = (Map<String, Object>) ActionContext.getContext().get("request");
                 request.put("student", stu);
-                //以下为进一步查询该生的成绩，页面生成成绩单
-                ScoreJdbc scoreJ = new ScoreJdbc();
-                Score sco = new Score();
-                sco.setXm(getXm());
-                List<Score> scoList = scoreJ.showScore(sco);
-                request.put("scoreList", scoList);
+
+                // 查询学生成绩列表
+                try {
+                    ScoreJdbc scoreJ = new ScoreJdbc();
+                    Score sco = new Score();
+                    sco.setXm(getXm());
+                    List<Score> scoList = scoreJ.showScore(sco);
+
+                    // 设置已修课程数量
+                    if (scoList != null) {
+                        stu.setKcs(scoList.size());
+                    } else {
+                        stu.setKcs(0);
+                    }
+
+                    request.put("scoreList", scoList);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    setMsg("查询成绩失败，请检查操作权限！");
+                }
             } else {
-                setMsg("查询失败，请检查操作权限！");
+                setMsg("查询学生基本信息失败，请检查操作权限！");
             }
         } else {
             setMsg("该学生不存在！");
         }
         return "success";
     }
-    
+
     
     /** updStu()方法实现更新学生信息*/
     public String updStu() throws Exception {
